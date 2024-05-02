@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
             // Cuando se hace clic en el botón, se inicia la actividad Registrarse
             val intent = Intent(this, Registrarse::class.java)
             startActivity(intent)
-            // No es necesario llamar a finish() aquí ya que quieres permanecer en la actividad actual
         }
 
         // Configuras el OnClickListener para el botón de iniciar Sesion
