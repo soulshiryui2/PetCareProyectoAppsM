@@ -1,11 +1,13 @@
 package mx.edu.potros.myapplication
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -30,7 +32,7 @@ class Registrarse : AppCompatActivity() {
 
         binding.saveButton.setOnClickListener{
             val email=binding.etCorreo.text.toString()
-            val password=binding.etContrasenia.toString()
+            val password=binding.etContrasenia.text.toString()
 
             if (checkAllField()){
              auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
@@ -39,12 +41,18 @@ class Registrarse : AppCompatActivity() {
                  if (it.isSuccessful){
                      auth.signOut()
                      Toast.makeText(this, "la cuenta a sido creada con exito",Toast.LENGTH_SHORT).show()
+                     // Redirigir a la MainActivity
+                     val intent = Intent(this, MainActivity::class.java)
+                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                     startActivity(intent)
+                     finish() // Finaliza la actividad actual para que el usuario no pueda volver atrás
                  }else{
                      //cuenta no creada
                      Log.e("error:",it.exception.toString())
                  }
              }
             }
+            ocultarTeclado()
 
         }
 
@@ -78,4 +86,14 @@ class Registrarse : AppCompatActivity() {
 
        return true
     }
+
+    private fun ocultarTeclado() {
+        val view: View? = this.currentFocus
+        if (view != null) {
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view.windowToken, 0)
+        }
+    }
 }
+
+

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_background"
-    tools:context=".log">
+    tools:context=".LogIn">
 
     <!-- Encabezado con GridLayout -->
     <GridLayout
@@ -45,7 +45,7 @@
         android:padding="16dp">
 
         <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/etCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Correo electrónico"
@@ -55,7 +55,7 @@
             android:layout_marginBottom="8dp" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
