@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "230149147439",
+    "project_id": "petcare-66014",
+    "storage_bucket": "petcare-66014.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230149147439:android:79a07a85560eb286f1efda",
+        "android_client_info": {
+          "package_name": "com.edu.potros.petcare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBhdUJgkZn3yKTBoZ4vMFfaecnPG_m474"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230149147439:android:f65beaee76a56fe4f1efda",
+        "android_client_info": {
+          "package_name": "mx.edu.potros.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBhdUJgkZn3yKTBoZ4vMFfaecnPG_m474"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
