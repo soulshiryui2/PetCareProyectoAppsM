@@ -6,70 +6,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingHorizontal="40dp"
+    android:paddingTop="20dp"
     android:background="@drawable/ic_background"
     tools:context=".PerfilMascota">
 
+    <!-- Título "Mis mascotas" -->
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pumba"
-        android:textAlignment="center"
+        android:text="Mis mascotas"
+        android:textSize="30sp"
         android:textColor="@color/black"
-        android:textSize="45sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp" />
 
-        android:layout_marginTop="35dp"
-        />
-
-    <ImageView
-        android:layout_width="215dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/ejemploperro"/>
-
-    <TextView
+    <!-- RecyclerView para mostrar la lista de mascotas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMascotas"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Porcion de Comida:"
-        android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="25sp"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="5 tz de croquetas"
-        android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="25sp"
-        />
-
+    <!-- Botón para volver atrás -->
     <Button
-        android:id="@+id/btn_iniciarSesion"
-        android:layout_width="300dp"
-        android:onClick="abrirLogin"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        android:backgroundTint="@color/botong"
-        android:text="Calendario Medico"
-        android:textColor="@color/white"
+        android:id="@+id/buttonVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        />
+        android:layout_marginTop="20dp" />
 
-    <Button
-        android:id="@+id/btn_registro"
-        android:onClick="abrirRegistro"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        android:backgroundTint="@color/botong"
-        android:text="Calendario de Actividades"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        />
 
 </LinearLayout>
+
+

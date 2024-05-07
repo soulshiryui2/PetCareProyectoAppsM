@@ -16,8 +16,28 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40sp"
-        android:layout_marginTop="45dp"
-        />
+        android:layout_marginTop="45dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre de la Mascota"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/editTextNombreMascota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el nombre de la mascota"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:maxLines="1" />
 
     <TextView
         android:layout_width="match_parent"
@@ -26,32 +46,14 @@
         android:textAlignment="center"
         android:textColor="@color/gray"
         android:textSize="25sp"
-        />
+        android:layout_marginTop="20dp" />
 
-
+    <!-- Botón para seleccionar una foto -->
     <Button
-        android:id="@+id/btn_iniciarSesion"
-        android:layout_width="300dp"
-        android:onClick="abrirLogin"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        android:backgroundTint="@color/botong"
-        android:text="Siguiente"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        />
+        android:id="@+id/buttonAgregarFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar foto"
+        android:layout_marginTop="10dp" />
 
-    <Button
-        android:id="@+id/btn_registro"
-        android:onClick="abrirRegistro"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        android:backgroundTint="@color/botong"
-        android:text="Regresar"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        />
 </LinearLayout>
