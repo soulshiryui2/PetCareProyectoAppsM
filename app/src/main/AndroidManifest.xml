@@ -16,13 +16,13 @@
             android:name=".LogIn"
             android:exported="false" />
         <activity
-            android:name=".principal"
+            android:name=".Principal"
             android:exported="false" />
         <activity
             android:name=".Main1Activity"
             android:exported="false" />
         <activity
-            android:name=".AgregarMascota1"
+            android:name=".AgregarMascota"
             android:exported="false" />
         <activity
             android:name=".PerfilMascota"

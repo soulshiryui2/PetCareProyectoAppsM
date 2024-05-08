@@ -13,7 +13,7 @@ import com.google.firebase.storage.FirebaseStorage
 import java.io.IOException
 import java.util.*
 
-class AgregarMascota1 : AppCompatActivity() {
+class AgregarMascota : AppCompatActivity() {
 
     private lateinit var editTextNombreMascota: EditText
     private lateinit var buttonAgregarFoto: Button
@@ -27,7 +27,15 @@ class AgregarMascota1 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_agregar_mascota1)
+        setContentView(R.layout.activity_agregar_mascota)
+
+        // Configurar el botón después de inflar el layout
+        var btnRegresar: Button = findViewById(R.id.botonRegresarAgregarMascota) as Button
+
+        btnRegresar.setOnClickListener(){
+            var intent: Intent = Intent(this, Principal::class.java)
+            startActivity(intent)
+        }
 
         editTextNombreMascota = findViewById(R.id.editTextNombreMascota)
         buttonAgregarFoto = findViewById(R.id.buttonAgregarFoto)

@@ -13,7 +13,7 @@
         android:layout_width="250dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="45dp"
         app:srcCompat="@drawable/petcare"/>
 
     <ImageView
@@ -31,7 +31,7 @@
         android:text="@string/descripcion"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="26sp" />
+        android:textSize="22sp" />
 
 
     <Button
@@ -40,7 +40,7 @@
         android:onClick="abrirLogin"
         android:layout_height="50dp"
         android:textSize="20sp"
-        android:backgroundTint="@color/botong"
+        android:backgroundTint="@color/azul"
         android:text="@string/iniciarSesion"
         android:textColor="@color/white"
         android:layout_gravity="center"
@@ -53,7 +53,7 @@
         android:layout_width="219dp"
         android:layout_height="50dp"
         android:textSize="20sp"
-        android:backgroundTint="@color/botong"
+        android:backgroundTint="@color/verde"
         android:text="@string/registrarse"
         android:textColor="@color/white"
         android:layout_gravity="center"

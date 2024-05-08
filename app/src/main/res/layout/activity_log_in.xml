@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_background"
+    android:background="@color/white"
     tools:context=".LogIn">
 
     <!-- Encabezado con GridLayout -->
@@ -19,29 +19,25 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Inicia sesion"
+            android:text="@string/inicioDeSesion"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:gravity="center"
             android:layout_row="0"
             android:layout_column="0"
+            android:layout_marginTop="25dp"
             android:padding="16dp"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/white"
-            android:layout_row="1"
-            android:layout_column="0"/>
 
     </GridLayout>
 
-    <!-- Contenido principal con LinearLayout -->
+    <!-- Contenido Principal con LinearLayout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_below="@id/headerGridLayout"
+        android:layout_marginTop="25dp"
         android:padding="16dp">
 
         <EditText
@@ -50,8 +46,9 @@
             android:layout_height="wrap_content"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
-            android:textSize="18sp"
+            android:textSize="30sp"
             android:textColor="@color/black"
+            android:layout_marginTop="25dp"
             android:layout_marginBottom="8dp" />
 
         <EditText
@@ -60,8 +57,9 @@
             android:layout_height="wrap_content"
             android:hint="Contraseña"
             android:inputType="textPassword"
-            android:textSize="18sp"
+            android:textSize="30sp"
             android:textColor="@color/black"
+            android:layout_marginTop="25dp"
             android:layout_marginBottom="8dp" />
 
         <Button
@@ -69,22 +67,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/botong"
-            android:text="Iniciar sesión"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/azul"
+            android:text="@string/iniciarSesion"
             android:textColor="@color/white"
             android:textColorLink="@color/green"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textViewSignUp"
             android:layout_width="match_parent"
             android:onClick="abrirRegistro"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="¿No tienes una cuenta? Regístrate aquí"
+            android:layout_marginTop="35dp"
+            android:text="@string/avisoRegistro"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="25sp"
             android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/botonRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/verde"
+            android:text="@string/registrarse"
+            android:textColor="@color/white"
+            android:textColorLink="@color/green"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/botonRegresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/gris"
+            android:text="@string/regresar"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
 
     </LinearLayout>
 

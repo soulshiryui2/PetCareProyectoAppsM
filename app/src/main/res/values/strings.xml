@@ -1,6 +1,6 @@
 <resources>
 
-    <!-- Pantalla principal -->
+    <!-- Pantalla Principal -->
     <string name="app_name">PetCare</string>
     <string name="iniciarSesion">Iniciar sesión</string>
     <string name="descripcion">PetCare, cuidandolos por ti.</string>
@@ -14,14 +14,20 @@
     <string name="registrarse">Registrarse</string>
     <string name="crearCuenta">Crear cuenta</string>
 
+    <!-- Registro -->
+    <string name="inicioDeSesion">Inicio de sesión</string>
+    <string name="avisoRegistro">¿No tienes una cuenta?</string>
+
 
     <!--General-->
     <string name="agregarNuevo">Agregar nuevo</string>
     <string name="regresar">Regresar</string>
     <string name="siguiente">Siguiente</string>
 
-
+    <!--Principal-->
+    <string name="tusMascotas">Tus mascotas</string>
     <string name="agregarMascota">Agregar mascota</string>
+    <string name="nombreMascota">Nombre de mascota</string>
     <string name="agregarMascotaFoto">Agregar foto</string>
     <string name="ver">Ver</string>
     <string name="administrar">Administrar</string>

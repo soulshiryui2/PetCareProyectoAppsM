@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".principal">
+    android:background="@color/white"
+    tools:context=".Principal">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tus Mascotas"
+        android:text="@string/tusMascotas"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="42sp"
@@ -22,11 +23,10 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/botong"
-        android:text="Agregar nuevo"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/azul"
+        android:text="@string/agregarNuevo"
         android:textColor="@color/white"
         android:textSize="20sp" />
-
 
 </LinearLayout>

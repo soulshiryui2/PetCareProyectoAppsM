@@ -6,54 +6,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingHorizontal="40dp"
-    android:background="@drawable/ic_background"
-    tools:context=".AgregarMascota1">
+    android:background="@color/white"
+    tools:context=".AgregarMascota">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Agregar Mascota"
+        android:text="@string/agregarMascota"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:layout_marginTop="45dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nombre de la Mascota"
-        android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="25sp"
-        android:layout_marginTop="20dp" />
 
     <EditText
         android:id="@+id/editTextNombreMascota"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese el nombre de la mascota"
-        android:layout_marginTop="10dp"
+        android:hint="@string/nombreMascota"
+        android:layout_marginTop="25dp"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:inputType="text"
         android:maxLines="1" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Agregar foto de tu Mascota"
-        android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="25sp"
-        android:layout_marginTop="20dp" />
-
-    <!-- Botón para seleccionar una foto -->
     <Button
         android:id="@+id/buttonAgregarFoto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Seleccionar foto"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/verde"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:text="@string/agregarMascotaFoto" />
+
+    <Button
+        android:id="@+id/botonRegresarAgregarMascota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/gris"
+        android:text="@string/regresar"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
 </LinearLayout>

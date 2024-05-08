@@ -24,40 +24,46 @@ class Registrarse : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Inflar el layout primero
         binding = ActivityRegistrarseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //aut
-        auth=Firebase.auth
+        // Configurar el botón después de inflar el layout
+        var btnRegresar: Button = findViewById(R.id.botonRegresarReg) as Button
 
-        binding.saveButton.setOnClickListener{
-            val email=binding.etCorreo.text.toString()
-            val password=binding.etContrasenia.text.toString()
-
-            if (checkAllField()){
-             auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
-                 //si es correcto la cuenta se crea
-                 //si no pues no se crea la cuenta nueva
-                 if (it.isSuccessful){
-                     auth.signOut()
-                     Toast.makeText(this, "la cuenta a sido creada con exito",Toast.LENGTH_SHORT).show()
-                     // Redirigir a la MainActivity
-                     val intent = Intent(this, MainActivity::class.java)
-                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-                     startActivity(intent)
-                     finish() // Finaliza la actividad actual para que el usuario no pueda volver atrás
-                 }else{
-                     //cuenta no creada
-                     Log.e("error:",it.exception.toString())
-                 }
-             }
-            }
-            ocultarTeclado()
-
+        btnRegresar.setOnClickListener(){
+            var intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
+        // Continuar con el resto del código
+        auth = Firebase.auth
 
+        binding.saveButton.setOnClickListener{
+            val email = binding.etCorreo.text.toString()
+            val password = binding.etContrasenia.text.toString()
 
+            if (checkAllField()){
+                auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
+                    //si es correcto la cuenta se crea
+                    //si no pues no se crea la cuenta nueva
+                    if (it.isSuccessful){
+                        auth.signOut()
+                        Toast.makeText(this, "la cuenta a sido creada con exito",Toast.LENGTH_SHORT).show()
+                        // Redirigir a la MainActivity
+                        val intent = Intent(this, MainActivity::class.java)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        startActivity(intent)
+                        finish() // Finaliza la actividad actual para que el usuario no pueda volver atrás
+                    }else{
+                        //cuenta no creada
+                        Log.e("error:",it.exception.toString())
+                    }
+                }
+            }
+            ocultarTeclado()
+        }
     }
     private fun checkAllField(): Boolean {
         val email=binding.etCorreo.text.toString()
